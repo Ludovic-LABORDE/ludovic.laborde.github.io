@@ -1,0 +1,80 @@
+/* Racine */
+html{
+    width: 100%;
+    height: 100%;
+    font-size: 0.625rem; /* 10px */
+}
+/* Corp*/
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-size: 1.6rem;  /* 16px */
+    background-color: #2b2b2b;
+    font-family: 'Roboto', sans-serif;
+}
+/* Barre nav */
+header{
+    display: flex;
+    height: 5.9rem;
+    background-color: #2b2b2b;
+    color: white;
+    border-bottom: 0.1rem solid white;
+}
+
+header nav{
+    position: fixed;
+    width: 100%;
+    align-items: center;
+    margin:0 10%;
+    letter-spacing: 0.15rem;
+
+}
+header nav h1{
+    display: inline-flex;
+    text-decoration: underline #5f6266;
+    margin: 0;
+    padding: 1.2rem;
+    padding-top: 1.3rem;
+}
+header nav ul{
+    width: 50%;
+    height: 100%;
+    font-weight: 500;
+    margin: 0;
+    margin-right: 10%;
+    display: inline-flex;
+    justify-content: flex-start;
+    list-style-type: none;
+
+   
+}
+header nav .signup{
+    display: inline-flex;
+    width: auto;
+    height: 5.9rem;
+    padding: 0;
+    align-items: center;
+}
+.btn-nav{
+    padding: 2rem;
+    font-size: 90%;
+}
+.btn-nav a, .btn-signup a {
+    text-decoration: none;
+}
+.btn-signup{
+    padding: 0.7rem 1.2rem;
+    border: 1px solid #5f6266;
+    border-radius: 2px;
+}
+.btn-nav:hover {
+    background-color: black;
+}
+.btn-nav a, .btn-signup a:visited {
+    color: white;
+  }
+.btn-signup:hover {
+    background-color: black;
+
+}
