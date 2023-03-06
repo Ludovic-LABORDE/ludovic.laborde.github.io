@@ -7,28 +7,39 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=roboto:300,400,500,700,900" rel="stylesheet" />
-    <link rel="shortcut icon" href="./images/plumme.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./asset/plumme.png" type="image/x-icon">
     <title>Project</title>
 </head>
 <body>
     <header>
-        <nav>
-            <h1>Project</h1>
-            <ul>
-                <li class="btn-nav btn-home"><a href="index.html">HOME</a></li>
-                <li class="btn-nav btn-pricing"><a href="index.html">PRICING</a></li>
-                <li class="btn-nav btn-services"><a href="index.html">SERVICES</a></li>
-                <li class="btn-nav btn-about"><a href="index.html">ABOUT</a></li>
-                <li class="btn-nav btn-contact"><a href="index.html">CONTACT</a></li>
-            </ul>
-            <ul class="signup">
-                <li class=".btn-nav btn-signup"><a href="index.html">SIGN UP</a></li>
-            </ul>
+        <nav class="navbar">
+            <a href="#" class="logo_header">Nokin</a>
+            <div class="nav_links ">
+                <ul> 
+                    <li><a href="#" class="btn_active">Home</a></li>
+                    <li><a href="#">Project</a></li>
+                    <li><a href="#">Info</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <img src="./asset/menu-btn.png" alt="Bouton menu" href="#" class="menu_navbar">
+            <!-- <div class="box_menu_links">
+                <a href="index.html" class="menu_links"><img src="./asset/linkedin.png"></a>
+                <a href="index.html" class="menu_links"><img src="./asset/github.png"></a>
+            </div> -->
         </nav>
     </header>
-    <main>
+    <script>
+        const logo_header = document.querySelector(".logo_header")
+        const navLinks = document.querySelector(".nav_links")
 
-    </main>
-    <footer></footer>
+        logo_header.addEventListener('click',() => {
+        if (navLinks.hasAttribute("hidden")) {
+            navLinks.removeAttribute("hidden");
+        } else {
+            navLinks.setAttribute("hidden", "");
+        }
+        });
+    </script>
 </body>
 </html>
