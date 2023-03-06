@@ -30,16 +30,12 @@
         </nav>
     </header>
     <script>
-        const logo_header = document.querySelector(".logo_header")
-        const navLinks = document.querySelector(".nav_links")
+    const logo_header = document.querySelector(".logo_header")
+    const navLinks = document.querySelector(".nav_links")
 
-        logo_header.addEventListener('click',() => {
-        if (navLinks.hasAttribute("hidden")) {
-            navLinks.removeAttribute("hidden");
-        } else {
-            navLinks.setAttribute("hidden", "");
-        }
-        });
+    logo_header.addEventListener('click',()=>{
+    navLinks.classList.toggle('mobile-menu')
+    })
     </script>
 </body>
 </html>
