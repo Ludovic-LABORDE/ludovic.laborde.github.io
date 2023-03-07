@@ -4,24 +4,31 @@
     text-decoration: none;
     list-style: none;
 }
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 html, body {
     font-family: 'Poppins', sans-serif;
     width: 100%;
+    max-width: 100vw;
     
 }
 .navbar .nav_links ul li a:hover {
-    color: rgba(0, 0, 0, 0.883);
+    color: #222222e0;
     background-color: aquamarine;
     box-shadow: 0 0 10px aquamarine, 0 0 20px aquamarine, 0 0 40px aquamarine;
     transition-delay: 0.2s;
     border-radius: 2px;
 
-}
+}   
 .navbar .nav_links ul li .btn_active:hover {
     color: aquamarine;
     background: 0;
     box-shadow: none;
 }
+
 header {
     height: 100vh;
     width: 100%;
@@ -73,8 +80,50 @@ header {
 .navbar .menu_navbar {
     width: 2em;
 }
-body main{
-    background-color: ;
+body header .title_container{
+    position: relative;
+    top: 200px;
+}
+body header h2 {
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto' sans-serif;
+    text-transform: uppercase;
+    color: transparent; 
+    font-size: 0px;
+}
+body header h2 span{ 
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    font-size: clamp(20px, 8vw, 120px);
+}
+body header h2:nth-child(1) {
+    font-weight: 200;
+    animation: txt-appearance 0s 1s forwards;
+}
+body header h2:nth-child(2) {
+    animation: txt-appearance 0s 1.25s forwards;
+}
+body header h2:nth-child(1) span::after{
+    background:  rgb(0, 255, 187);
+    animation: slide-in 0.75s ease-out forwards,
+    slide-out 0.75s 1s ease-out forwards;
+}
+body header h2:nth-child(2) span::after{
+    background: aqua;
+    animation: slide-in 0.75s 0.3s ease-out forwards,
+    slide-out 0.75s 1.3s ease-out forwards;
+}
+body header h2 span::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
 }
 @media screen and (max-width: 900px){
     .navbar {
@@ -121,4 +170,25 @@ body main{
         font-size: 1.2em;
         
     }    
+    body header h2 span{
+        display: none;
+        position: relative;
+        overflow: hidden;
+        font-size: clamp(20px, 8vw, 120px);
+    }
+}
+@keyframes slide-in {
+    100% {
+        transform: translateX(0%);
+    }
+}
+@keyframes slide-out {
+    100% {
+        transform: translateX(100%)
+    }
+}
+@keyframes txt-appearance {
+    100% {
+        color: antiquewhite;;
+    }
 }
