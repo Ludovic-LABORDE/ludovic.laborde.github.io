@@ -22,7 +22,7 @@
                     <li><a href="#">Contact</a></li>
                 </ul>
             </div>
-            <img src="./asset/menu-btn.png" alt="Bouton menu" href="#" class="menu_navbar">
+            <img src="./asset/menu-btn.png" alt="Bouton menu" class="menu_navbar">
             <!-- <div class="box_menu_links">
                 <a href="index.html" class="menu_links"><img src="./asset/linkedin.png"></a>
                 <a href="index.html" class="menu_links"><img src="./asset/github.png"></a>
@@ -30,12 +30,12 @@
         </nav>
     </header>
     <script>
-    const logo_header = document.querySelector(".logo_header")
-    const navLinks = document.querySelector(".nav_links")
-
-    logo_header.addEventListener('click',()=>{
-    navLinks.classList.toggle('mobile-menu')
-    })
+        const menuBtn = document.querySelector(".menu_navbar");
+        const navLinks = document.querySelector(".nav_links");
+    
+        menuBtn.addEventListener("click", () => {
+            navLinks.classList.toggle("mobile-menu");
+        });
     </script>
 </body>
 </html>
